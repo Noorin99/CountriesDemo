@@ -1,0 +1,8 @@
+<div class="cards-container">
+  <app-country-card
+    class="card-container"
+    *ngFor="let countryData of countries$ | async"
+    [countryData]="countryData"
+  >
+  </app-country-card>
+</div>

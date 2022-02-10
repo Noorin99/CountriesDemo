@@ -1,0 +1,15 @@
+<form
+  autocomplete="off"
+  #searchForm="ngForm"
+  (ngSubmit)="onSubmit(searchForm.value)"
+>
+  <input
+    type="search"
+    (ngModel)="(model.search)"
+    placeholder="Search"
+    name="search"
+  />
+  <button type="submit">
+    <mat-icon aria-label="search icon" class="search-icon">search</mat-icon>
+  </button>
+</form>

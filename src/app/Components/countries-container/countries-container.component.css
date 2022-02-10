@@ -1,0 +1,12 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 30px;
+    justify-content: center;
+    padding: 3%;
+    margin-top: 70px;
+}
+
+.card-container {
+    margin: auto;
+}

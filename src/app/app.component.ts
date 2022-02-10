@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CountryService } from './countries-data.service';
+
 
 @Component({
   selector: 'app-root',
@@ -8,13 +8,7 @@ import { CountryService } from './countries-data.service';
 })
 export class AppComponent {
   title = 'CountriesApp';
-  countries: any;
 
-  constructor(private countryService: CountryService) {}
-
-  ngOnInit() {
-    this.countryService.getCountriesData().subscribe((response) => {
-      this.countries = response;
-    });
   }
-}
+
+

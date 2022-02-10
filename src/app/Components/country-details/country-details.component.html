@@ -1,0 +1,25 @@
+<img src="{{ countryDetails[0].flags.png }}" />
+<div class="titles_card">
+  <span class="name">{{ countryDetails[0].name.common }}</span>
+  <div>
+    <span class="tits">population: </span>
+    <span>{{ countryDetails[0].population }}</span>
+  </div>
+  <div>
+    <span class="tits">region: </span>
+    <span>{{ countryDetails[0].region }}</span>
+  </div>
+  <div>
+    <span class="tits">capital: </span>
+    <span> {{ countryDetails[0].capital }}</span>
+  </div>
+
+  <div>
+    <span class="tits">timezones: </span>
+    <span> {{ countryDetails[0].timezones[0] }}</span>
+  </div>
+
+  <a [href]="countryDetails[0].maps.googleMaps" target="_blank"
+    >Open in Google maps</a
+  >
+</div>

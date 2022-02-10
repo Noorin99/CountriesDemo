@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { Input } from '@angular/core';
 
 @Component({
@@ -6,8 +6,6 @@ import { Input } from '@angular/core';
   templateUrl: 'country-card.component.html',
   styleUrls: ['./country-card.component.css'],
 })
-export class CardOverviewExample {
-    @Input() countryData: any;
-    
-    
+export class CardOverviewComponent {
+  @Input() countryData: any;
 }
