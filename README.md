@@ -1,14 +1,23 @@
 # CountriesApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+## Description
+
+Countries application enables you to discover different countries around the world. You can make an educational journey inside the application to discover countries, countries' information such as their languages, and many other different things in an easy and fast way.
+
+## User Stories
+
+#### As a user you can
+
+* See all countries from the API on the homepage
+* Search for a country using an input field
+* Filter countries by region
+* Click on a country to see more detailed information
+* Click through to the border countries on the detail page
+
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
