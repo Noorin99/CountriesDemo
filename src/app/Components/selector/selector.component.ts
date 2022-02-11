@@ -27,7 +27,7 @@ export class SelectorComponent implements OnInit {
   ];
 
   onClick(value: any) {
-    this.region = value;
+    this.region = value.target.value;
     this.router.navigate([`region/${this.region}`]);
   }
 }

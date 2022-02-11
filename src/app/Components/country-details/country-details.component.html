@@ -1,25 +1,44 @@
-<img src="{{ countryDetails[0].flags.png }}" />
-<div class="titles_card">
-  <span class="name">{{ countryDetails[0].name.common }}</span>
-  <div>
-    <span class="tits">population: </span>
-    <span>{{ countryDetails[0].population }}</span>
-  </div>
-  <div>
-    <span class="tits">region: </span>
-    <span>{{ countryDetails[0].region }}</span>
-  </div>
-  <div>
-    <span class="tits">capital: </span>
-    <span> {{ countryDetails[0].capital }}</span>
+<div class="container">
+  <div class="cover">
+    <img src="{{ countryDetails[0].flags.png }}" class="flag-image" />
+
+    <a [href]="countryDetails[0].maps.googleMaps" target="_blank"
+      >Open in Google maps</a
+    >
   </div>
 
-  <div>
-    <span class="tits">timezones: </span>
-    <span> {{ countryDetails[0].timezones[0] }}</span>
+  <div class="details">
+    <span class="name">{{ countryDetails[0].name.common }}</span>
+    <div class="details-container">
+      <div>
+        <span class="title">Population: </span>
+        <span class="info">{{ countryDetails[0].population }}</span>
+      </div>
+      <div>
+        <span class="title">Region: </span>
+        <span class="info">{{ countryDetails[0].region }}</span>
+      </div>
+      <div>
+        <span class="title">Capital: </span>
+        <span class="info"> {{ countryDetails[0].capital }}</span>
+      </div>
+      <div>
+        <span class="title">Timezones: </span>
+        <span class="info"> {{ countryDetails[0].timezones[0] }}</span>
+      </div>
+    </div>
   </div>
+</div>
 
-  <a [href]="countryDetails[0].maps.googleMaps" target="_blank"
-    >Open in Google maps</a
+<div class="subtitle">
+  <h2>View border countries</h2>
+</div>
+
+<div class="borders-container">
+  <app-country-card
+    class="card-container"
+    *ngFor="let border of borders"
+    [countryData]="border"
   >
+  </app-country-card>
 </div>

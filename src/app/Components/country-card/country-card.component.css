@@ -1,11 +1,50 @@
-.example-card {
-  max-width: 200px;
-}
-
-.example-header-image {
-  background-size: cover;
-}
-
 .card-container {
   text-decoration: none;
+  color: #000;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  display: block;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 240px;
+}
+
+.wrapper_img {
+  height: 130px;
+  width: 100%;
+}
+
+.wrapper_img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.details {
+  padding: 20px;
+  line-height: 26px;
+}
+
+
+.name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 7px;
+}
+.line{
+  display: flex;
+}
+.line span:first-child {
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: rgb(104, 96, 96);
+  width: 33%;
+  display: block;
+}
+
+.line span:last-child {
+  margin-left: 10px;
+  font-size: 0.8rem;
+  color: rgb(55, 50, 50);
 }

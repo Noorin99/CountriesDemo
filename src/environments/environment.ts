@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  BASE_URL: 'https://restcountries.com/v3.1'
+  BASE_URL: 'https://restcountries.com/v3.1',
+  BORDER_URL: 'https://restcountries.com/v2/alpha'
 };
 
 /*

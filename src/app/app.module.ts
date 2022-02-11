@@ -10,12 +10,14 @@ import { CountryService } from './Services/countries-data.service';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './Material/material.module';
-import { SearchComponent } from './Components/search/search.component';
-import { NavbarComponent } from './Components/navbar/navbar.component';
-import { SelectorComponent } from './Components/selector/selector.component';
-import { CardOverviewComponent } from './Components/country-card/country-card.component';
-import { CountryDetailsComponent } from './Components/country-details/country-details.component';
-import { CountriesContainerComponent } from './Components/countries-container/countries-container.component';
+import {
+  NavbarComponent,
+  SearchComponent,
+  SelectorComponent,
+  CardOverviewComponent,
+  CountryDetailsComponent,
+  CountriesContainerComponent,
+} from './Components';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { CountriesContainerComponent } from './Components/countries-container/co
     HttpClientModule,
     RouterModule.forRoot(routingTable),
     MaterialModule,
-    FormsModule 
+    FormsModule,
   ],
   providers: [CountryService],
   bootstrap: [AppComponent],

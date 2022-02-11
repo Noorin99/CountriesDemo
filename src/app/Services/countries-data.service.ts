@@ -20,4 +20,8 @@ export class CountryService {
   getCountriesByRegion(region: string) {
     return this.http.get<Country[]>(`${environment.BASE_URL}/region/${region}`);
   }
+
+  getBorderd( border: string){
+    return this.http.get<Country[]>(`${environment.BORDER_URL}/${border}`)
+  }
 }

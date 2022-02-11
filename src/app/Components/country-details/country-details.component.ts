@@ -5,10 +5,11 @@ import { CountryService } from '../../Services/countries-data.service';
 @Component({
   selector: 'app-country-details',
   templateUrl: './country-details.component.html',
-  styleUrls: [],
+  styleUrls: ['./country-details.component.css'],
 })
 export class CountryDetailsComponent {
   countryDetails: any;
+  borders: any = [];
 
   constructor(
     private countryService: CountryService,
@@ -21,6 +22,13 @@ export class CountryDetailsComponent {
       if (name) {
         this.countryService.getCountry(name).subscribe((country) => {
           this.countryDetails = country;
+
+          country[0].borders.forEach((el) => {
+            this.countryService.getBorderd(el).subscribe((country) => {
+              this.borders.push(country);
+              console.log(country);
+            });
+          });
         });
       }
     });

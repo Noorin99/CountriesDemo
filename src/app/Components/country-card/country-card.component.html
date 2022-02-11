@@ -1,16 +1,24 @@
 <a
   class="card-container"
-  [routerLink]="['/countries', countryData.name.common]"
+  [routerLink]="['/countries', countryData.name.common ? countryData.name.common : countryData.name]"
 >
-  <mat-card class="example-card">
-    <img mat-card-image [src]="countryData.flags.png" alt="Country’s flag" />
-    <mat-card-header>
-      <mat-card-title>{{ countryData.name.common }}</mat-card-title>
-      <mat-card-subtitle>Capital: {{ countryData.capital }}</mat-card-subtitle>
-      <mat-card-subtitle>Region: {{ countryData.region }}</mat-card-subtitle>
-      <mat-card-subtitle
-        >Population: {{ countryData.population }}</mat-card-subtitle
-      >
-    </mat-card-header>
-  </mat-card>
+    <div class="wrapper_img">
+      <img mat-card-image [src]="countryData.flags.png" alt="Country’s flag" />
+    </div>
+
+    <div class="details">
+      <span class="name">{{  countryData.name.common ? countryData.name.common : countryData.name }}</span>
+      <div class="line">
+        <span>Capital: </span>
+        <span>{{ countryData.capital }}</span>
+      </div>
+      <div class="line">
+        <span>Region: </span>
+        <span>{{ countryData.region }}</span>
+      </div>
+      <div class="line">
+        <span>Population: </span>
+        <span> {{ countryData.population }}</span>
+      </div>
+    </div>
 </a>
