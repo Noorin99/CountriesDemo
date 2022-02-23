@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CountryService } from '../../Services/countries-data.service';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Country } from 'src/app/Interface/country.interface';
 
 @Component({
   selector: 'app-countries-container',
@@ -8,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./countries-container.component.css'],
 })
 export class CountriesContainerComponent {
-  countries$: any;
+  countries$: Observable<Country[]> | undefined;
 
   constructor(
     private countryService: CountryService,

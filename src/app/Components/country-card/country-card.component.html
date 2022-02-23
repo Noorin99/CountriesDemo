@@ -6,7 +6,7 @@
       <img mat-card-image [src]="countryData.flags.png" alt="Country’s flag" />
     </div>
 
-    <div class="details">
+    <div class="details" *ngIf="countryData">
       <span class="name">{{  countryData.name.common ? countryData.name.common : countryData.name }}</span>
       <div class="line">
         <span>Capital: </span>

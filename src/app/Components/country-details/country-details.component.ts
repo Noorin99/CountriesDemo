@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CountryService } from '../../Services/countries-data.service';
+import {Country} from '../../Interface/country.interface';
 
 @Component({
   selector: 'app-country-details',
@@ -8,7 +9,7 @@ import { CountryService } from '../../Services/countries-data.service';
   styleUrls: ['./country-details.component.css'],
 })
 export class CountryDetailsComponent {
-  countryDetails: any;
+  countryDetails: Country[] = [];
   borders: any = [];
 
   constructor(
@@ -26,7 +27,6 @@ export class CountryDetailsComponent {
           country[0].borders.forEach((el) => {
             this.countryService.getBorderd(el).subscribe((country) => {
               this.borders.push(country);
-              console.log(country);
             });
           });
         });

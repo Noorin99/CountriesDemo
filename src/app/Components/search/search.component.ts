@@ -13,7 +13,6 @@ export class SearchComponent {
   };
 
   displayValue: string = '';
-  filteredData: any = [];
   queryName: string = '';
 
   constructor(private countryService: CountryService, private router: Router) {}
